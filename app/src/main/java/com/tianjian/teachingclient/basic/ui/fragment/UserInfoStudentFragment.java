@@ -521,7 +521,7 @@ public class UserInfoStudentFragment extends Fragment{
 	                         proBar.setMax(100);
 	                         proBar.setProgress(0);
 						}else{
-							Toast.makeText(getActivity(), "没有内存卡", 1).show();
+							Toast.makeText(getActivity(), "没有内存卡", Toast.LENGTH_SHORT).show();
 						}
 					}else if("1".equals(item.getUPDATEFLAG()) && verson >currentVerson){
 						//updateFlag.setVisibility(View.VISIBLE);

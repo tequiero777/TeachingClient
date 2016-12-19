@@ -44,12 +44,8 @@ public class MainActivity extends FragmentActivity{
 	private RadioGroup radioGroup;
 	private RadioButton radio_home;
 	private FragmentManager fragmentManager;
-	public static final int GET_CONTACT = 10004;
-	private String securityUserBaseinfoId,userId;
 	private Handler handler;
-	private Dialog dialog;
 	private SystemApplcation systemApplcation;
-	private SharedPreferences share;
 	public static String FROM = null;
 	public static MainActivity mainActivity ;
 	private HomePageStudentFragment homepageFragment_stu;
@@ -69,8 +65,8 @@ public class MainActivity extends FragmentActivity{
 
 	/**线程永久执行标识位*/
 	private boolean threadFlag = false;
-	
-	
+
+
 	public Handler getHandler() {
 		return handler;
 	}

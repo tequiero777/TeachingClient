@@ -146,8 +146,8 @@ public class LoginActivity extends BaseActivity implements OnClickListener,OnChe
 		pwd = (EditText)findViewById(R.id.pwd);
 		String str = getIntent().getStringExtra("phone");
 		if(StringUtil.isEmpty(str)){
-			username.setText(preferences!=null?preferences.getString("username", null):"");
-			pwd.setText(preferences!=null?preferences.getString("password", null):"");
+			username.setText(preferences!=null?preferences.getString("userName", null):"");
+			pwd.setText(preferences!=null?preferences.getString("userPwd", null):"");
 		}else{
 			username.setText(str);
 		}
@@ -158,8 +158,8 @@ public class LoginActivity extends BaseActivity implements OnClickListener,OnChe
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				Editor edit = preferences.edit();
 				if (!isChecked) {
-					edit.putString("username", "");
-					edit.putString("password", "");
+					edit.putString("userName", "");
+					edit.putString("userPwd", "");
 				}
 				edit.commit();
 			}

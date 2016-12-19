@@ -55,8 +55,6 @@
           style="@android:style/Widget.ProgressBar.Horizontal"/>
     
     <com.handmark.pulltorefresh.library.PullToRefreshGridView 
-        android:paddingLeft="5dp"
-    	android:paddingRight="5dp"
         android:id="@+id/resources_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

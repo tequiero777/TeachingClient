@@ -7,6 +7,8 @@
  */
 package com.tianjian.teachingclient.util;
 
+import android.util.Log;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.InputStream;
@@ -16,8 +18,6 @@ import java.net.URL;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import android.util.Log;
 
 
 /**
@@ -59,14 +59,7 @@ public class DownloadFileUtils {
     private DownloadFileCallback callback;//下载的回调接口
     private ExecutorService executorService;//固定大小的线程池
     private volatile boolean error = false;//全局变量，使用volatile同步，下载产生异常时改变
-    /**
-     * 下载工具类构造器
-     * @param String url
-     * @param String filePath
-     * @param int threadCount
-     * @param callback
-     * 
-     * */
+
     public DownloadFileUtils(String url,String filePath,String fileName,int threadCount,DownloadFileCallback callback){
             this.url = url;
             this.filePath = filePath;
